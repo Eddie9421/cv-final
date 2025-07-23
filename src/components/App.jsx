@@ -12,7 +12,15 @@ function App() {
         <InputField id="email" labelText="Email:" type="email" />
         <InputField id="phone-number" labelText="Phone number:" type="tel" />
       </Section>
-      <Section sectionName=""></Section>
+      <Section sectionName="Educational Info">
+        <InputField id="school-name" labelText="School name:" type="text" />
+        <InputField
+          id="title-of-study"
+          labelText="Title of study:"
+          type="text"
+        />
+        <InputField id="date-of-study" labelText="Date of study:" type="date" />
+      </Section>
     </div>
   );
 }
