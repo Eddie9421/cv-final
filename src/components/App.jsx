@@ -21,6 +21,21 @@ function App() {
         />
         <InputField id="date-of-study" labelText="Date of study:" type="date" />
       </Section>
+      <Section sectionName="Practical Experience">
+        <InputField id="company-name" labelText="Company name:" type="text" />
+        <InputField
+          id="position-title"
+          labelText="Position title:"
+          type="text"
+        />
+        <InputField
+          id="main-responsibilities"
+          labelText="Main responsibilities:"
+          type="text"
+        />
+        <InputField id="date-from" labelText="Date from:" type="date" />
+        <InputField id="date-until" labelText="Date until:" type="date" />
+      </Section>
     </div>
   );
 }
