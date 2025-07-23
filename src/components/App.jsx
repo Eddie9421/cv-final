@@ -9,7 +9,10 @@ function App() {
       <h1 className="mt-16 font-medium text-shadow-lg">Bad CV Maker</h1>
       <Section sectionName="General Info">
         <InputField id="name" labelText="Name:" type="text" />
+        <InputField id="email" labelText="Email:" type="email" />
+        <InputField id="phone-number" labelText="Phone number:" type="tel" />
       </Section>
+      <Section sectionName=""></Section>
     </div>
   );
 }
