@@ -3,6 +3,7 @@ export default function Section({ children, sectionName }) {
     <>
       <fieldset>
         <legend>{sectionName}</legend>
+        {children}
       </fieldset>
     </>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/App.css";
+import Section from "./Section.jsx";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <h1 className="mt-16 font-medium text-shadow-lg dark:text-white ">
         Bad CV Maker
       </h1>
+      <Section></Section>
     </div>
   );
 }
