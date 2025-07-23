@@ -1,10 +1,10 @@
 export default function Section({ children, sectionName }) {
   return (
     <>
-      <fieldset className="flex flex-col border-2 p-2">
-        <legend>{sectionName}</legend>
+      <div className="flex flex-col border-2 p-2">
+        <h2 className="flex justify-center">{sectionName}</h2>
         {children}
-      </fieldset>
+      </div>
     </>
   );
 }
