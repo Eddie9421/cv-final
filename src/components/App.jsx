@@ -5,11 +5,28 @@ import InputField from "./InputField.jsx";
 
 function App() {
   const [editingMode, setEditingMode] = useState(true);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    "phone-number": "",
+    "school-name": "",
+    "title-of-study": "",
+    "date-of-study": "",
+    "company-name": "",
+    "position-title": "",
+    "main-responsibilities": "",
+    "date-from": "",
+    "date-until": "",
+  });
+
+  function handleChange(id, value) {
+    setFormData((prevData) => ({ ...prevData, [id]: value }));
+  }
 
   if (editingMode) {
     return (
       <div className="flex flex-col items-center justify-center">
-        <h1 className="mt-16 font-medium text-shadow-lg">Bad CV Maker</h1>
+        <h1 className="mt-16 font-medium text-shadow-lg">CV Maker</h1>
         <form
           action=""
           onSubmit={(e) => {
@@ -18,25 +35,49 @@ function App() {
           }}
         >
           <Section sectionName="General Info">
-            <InputField id="name" labelText="Name:" type="text" />
-            <InputField id="email" labelText="Email:" type="email" />
+            <InputField
+              id="name"
+              labelText="Name:"
+              type="text"
+              onChange={handleChange}
+              value={formData.name}
+            />
+            <InputField
+              id="email"
+              labelText="Email:"
+              type="email"
+              onChange={handleChange}
+              value={formData.email}
+            />
             <InputField
               id="phone-number"
               labelText="Phone number:"
               type="tel"
+              onChange={handleChange}
+              value={formData["phone-number"]}
             />
           </Section>
           <Section sectionName="Educational Info">
-            <InputField id="school-name" labelText="School name:" type="text" />
+            <InputField
+              id="school-name"
+              labelText="School name:"
+              type="text"
+              onChange={handleChange}
+              value={formData["school-name"]}
+            />
             <InputField
               id="title-of-study"
               labelText="Title of study:"
               type="text"
+              onChange={handleChange}
+              value={formData["title-of-study"]}
             />
             <InputField
               id="date-of-study"
               labelText="Date of study:"
               type="date"
+              onChange={handleChange}
+              value={formData["date-of-study"]}
             />
           </Section>
           <Section sectionName="Practical Experience">
@@ -44,26 +85,44 @@ function App() {
               id="company-name"
               labelText="Company name:"
               type="text"
+              onChange={handleChange}
+              value={formData["company-name"]}
             />
             <InputField
               id="position-title"
               labelText="Position title:"
               type="text"
+              onChange={handleChange}
+              value={formData["position-title"]}
             />
             <InputField
               id="main-responsibilities"
               labelText="Main responsibilities:"
               type="text"
+              onChange={handleChange}
+              value={formData["main-responsibilities"]}
             />
-            <InputField id="date-from" labelText="Date from:" type="date" />
-            <InputField id="date-until" labelText="Date until:" type="date" />
+            <InputField
+              id="date-from"
+              labelText="Date from:"
+              type="date"
+              onChange={handleChange}
+              value={formData["date-from"]}
+            />
+            <InputField
+              id="date-until"
+              labelText="Date until:"
+              type="date"
+              onChange={handleChange}
+              value={formData["date-until"]}
+            />
           </Section>
           <input type="submit" value="Submit" />
         </form>
       </div>
     );
   } else {
-    return <div>here</div>;
+    return <button onClick={() => setEditingMode(true)}>here</button>;
   }
 }
 

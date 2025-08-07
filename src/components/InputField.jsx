@@ -1,20 +1,12 @@
-import { useState } from "react";
-
-export default function InputField({ id, labelText, type }) {
-  const [inputValue, setInputValue] = useState("");
-
-  function handleInputValueChange(e) {
-    setInputValue(e.target.value);
-  }
-
+export default function InputField({ id, value, labelText, type, onChange }) {
   return (
     <>
       <label htmlFor={id}>{labelText}</label>
       <input
         type={type}
         id={id}
-        onChange={handleInputValueChange}
-        value={inputValue}
+        onChange={(e) => onChange(id, e.target.value)}
+        value={value}
         className="border-[1px]"
       ></input>
     </>
