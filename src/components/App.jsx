@@ -134,6 +134,13 @@ function App() {
         <p>{formData["school-name"]}</p>
         <p>{formData["title-of-study"]}</p>
         <p>{formData["date-of-study"]}</p>
+        <h2>Experience</h2>
+        <p>{formData["company-name"]}</p>
+        <p>{formData["position-title"]}</p>
+        <p>{formData["main-responsibilities"]}</p>
+        <p>
+          {formData["date-from"]} - {formData["date-until"]}
+        </p>
       </>
     );
   }
