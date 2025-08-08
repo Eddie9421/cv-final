@@ -130,6 +130,10 @@ function App() {
           <li>Email Address: {formData.email}</li>
           <li>Phone Number: {formData["phone-number"]}</li>
         </ul>
+        <h2>Education</h2>
+        <p>{formData["school-name"]}</p>
+        <p>{formData["title-of-study"]}</p>
+        <p>{formData["date-of-study"]}</p>
       </>
     );
   }
