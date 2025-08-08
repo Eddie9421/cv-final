@@ -122,7 +122,16 @@ function App() {
       </div>
     );
   } else {
-    return <button onClick={() => setEditingMode(true)}>here</button>;
+    return (
+      <>
+        <h1>{formData.name}</h1>
+        <h2>Contact Details</h2>
+        <ul>
+          <li>Email Address: {formData.email}</li>
+          <li>Phone Number: {formData["phone-number"]}</li>
+        </ul>
+      </>
+    );
   }
 }
 
