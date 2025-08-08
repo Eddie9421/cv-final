@@ -141,6 +141,7 @@ function App() {
         <p>
           {formData["date-from"]} - {formData["date-until"]}
         </p>
+        <button onClick={() => setEditingMode(true)}>Edit</button>
       </>
     );
   }
