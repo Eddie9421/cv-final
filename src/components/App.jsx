@@ -26,7 +26,7 @@ function App() {
   if (editingMode) {
     return (
       <div className="flex flex-col items-center justify-center">
-        <h1 className="mt-16 font-medium text-shadow-lg">CV Maker</h1>
+        <h1 className="mt-16 font-medium text-shadow-lg text-4xl">CV Maker</h1>
         <form
           action=""
           onSubmit={(e) => {
