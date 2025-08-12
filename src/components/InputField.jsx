@@ -7,7 +7,7 @@ export default function InputField({ id, value, labelText, type, onChange }) {
         id={id}
         onChange={(e) => onChange(id, e.target.value)}
         value={value}
-        className="border-[1px] mb-2"
+        className="border-[0.05rem] mb-2 rounded shadow-md"
       ></input>
     </>
   );
