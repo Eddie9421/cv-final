@@ -20,7 +20,7 @@ function App() {
   });
 
   function handleChange(id, value) {
-    setFormData((prevData) => ({ ...prevData, [id]: value }));
+    setFormData({ ...formData, [id]: value });
   }
 
   if (editingMode) {
